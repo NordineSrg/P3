@@ -586,13 +586,13 @@ footer p
     }
     footer img
     {
-        height: 80%;
+        height: 35%;
         width: 20%;
 
     }   
     .footer_image-texte img 
     {
-        height: 30px;
-        width: 27px;
+        height: 52px;
+        width: 42px;
     }
 }
