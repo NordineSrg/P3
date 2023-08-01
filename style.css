@@ -463,7 +463,8 @@ footer p
         height: 35px;
         margin-left: 552px;
         margin-top: 12px;
-        padding: 20px;
+        padding: 20px; 
+        opacity: 0;
     }
     .CoeurV2:hover
     {
