@@ -457,14 +457,14 @@ footer p
     }
 
     .CoeurV2
-    {
-         position: absolute;
-  width: 43px;
-  height: 35px;
-  margin-left: 552px;
-  margin-top: 12px;
-  padding: 20px;
-}
+{
+        position: absolute;
+        width: 43px;
+        height: 35px;
+        margin-left: 552px;
+        margin-top: 12px;
+        padding: 20px;
+    }
     .CoeurV2:hover
     {
         opacity: 1;
