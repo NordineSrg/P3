@@ -26,3 +26,9 @@
 
 
 ![Sans titre](https://github.com/NordineSrg/P3/assets/97751426/14bcd086-3df1-4513-9cee-4da778d738bb)
+
+![fourchette](https://github.com/NordineSrg/P3/assets/97751426/6e3d9443-d955-4d5c-9f7b-5adc9cdcd500)
+
+![mains](https://github.com/NordineSrg/P3/assets/97751426/dbb17af9-34e6-4535-933b-bd5f7ac431ee)
+
+![Sans titre](https://github.com/NordineSrg/P3/assets/97751426/cdcc0e11-ad56-45e3-bef4-6b7e28a1a34e)
