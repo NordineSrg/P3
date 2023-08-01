@@ -18,3 +18,11 @@
 ![toa-heftiba-DQKerTsQwi0-unsplash](https://github.com/NordineSrg/P3/assets/97751426/2770343e-3273-4e43-9336-0e29491dc69f)
 
 ![stil-u2Lp8tXIcjw-unsplash](https://github.com/NordineSrg/P3/assets/97751426/d6262fbb-3f30-4462-9953-f9a62f5e82c3)
+
+![list](https://github.com/NordineSrg/P3/assets/97751426/27d1d913-acc9-42f3-a579-aa4cda0d03ee)
+
+
+![tel](https://github.com/NordineSrg/P3/assets/97751426/d4c6f596-48aa-4670-8bfb-2c7bba6a61c4)
+
+
+![Sans titre](https://github.com/NordineSrg/P3/assets/97751426/14bcd086-3df1-4513-9cee-4da778d738bb)
