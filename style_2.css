@@ -432,8 +432,8 @@ footer p
 
     footer img
     {
-        height: 80%;
-        width: 20%;
+      height: 35%;
+        width: 20%;;
     }   
 
     footer p
@@ -443,8 +443,8 @@ footer p
 
     .footer_image-texte img 
     {
-        height: 30px;
-        width: 27px;
+        Vheight: 52px;
+        width: 42px;
     }
 }
 
