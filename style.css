@@ -1,5 +1,6 @@
 body{
     font-family: roboto;
+    margin: 0cm;
 }
 
 a {
@@ -46,7 +47,7 @@ a {
 .Point_loading
 {
     position: fixed;
-    margin-top: 500px;
+    margin-top: 590px;
     font-size: 120px;
     animation: Point infinite 2000ms;
     color: #ff79da;
@@ -255,6 +256,24 @@ button
     height: 57px;
     padding-right: 45px;
     padding-top: 40px;
+    margin: 0px;
+    margin-top: 6px;
+    flex: auto;
+    position: absolute;
+    right: 50px;
+}
+.CoeurV2
+{
+    width: 74px;
+    height: 57px;
+    padding-right: 45px;
+    padding-top: 40px;
+    margin: 0px;
+    margin-top: 6px;
+    flex: auto;
+    position: absolute;
+    right: 50px;
+    opacity: 0;
 }
 
 .CoeurV2:hover
@@ -377,12 +396,12 @@ footer p
 {
     header
     {
-        height: 110px;
+        height: 70px;
     }
     #img_loading
     {
-        left: 500px;
-        top:350px;
+        left: 600px;
+        top:380px;
         height: 23%;
     }
 
@@ -402,7 +421,7 @@ footer p
         
         to{
             position: fixed;
-            left: 500px;
+            left: 600px;
             transform: rotate(360deg);
         }
     }
@@ -446,24 +465,26 @@ footer p
         font-size: 20px;
     }  
     
-    .coeur
+    .coeur 
     {
-        position: absolute;
         width: 43px;
         height: 35px;
         margin-left: 552px;
         margin-top: 12px;
         padding: 20px;
+        left: auto;
+        right: auto;
     }
 
     .CoeurV2
-{
-        position: absolute;
+    {
         width: 43px;
         height: 35px;
         margin-left: 552px;
         margin-top: 12px;
-        padding: 20px; 
+        padding: 20px;
+        left: auto;
+        right: auto;
         opacity: 0;
     }
     .CoeurV2:hover
@@ -551,8 +572,8 @@ footer p
 
     .SousPartie_Fonctionnement img
     {
-        height: 18px;
-        width:15px;
+        height: 23px;
+        width: 28px;
         margin-right: 20px;
     }
 
