@@ -1,161 +1,608 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
-        <title>Ohmyfood</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+body{
+    font-family: roboto;
+    margin: 0cm;
+}
 
-    <body>
+a {
+ text-decoration: none;
+ color: black;
+}
 
-        <div class="loading_screen">
-            <img id="img_loading" src="https://user-images.githubusercontent.com/97751426/257590230-21e39618-8ff3-4391-83e3-efdb39d85fef.png" alt="">
-            <h3 id="text_loading"> Oh my food </h3>
-            <p class="Point_loading">...</p>
-        </div>
+.loading_screen
+{
+    position: fixed;
+    background-color: white;
+    opacity:0 ;
+    z-index: -10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Shrikhand;
+    height: 100%;
+    width: 100%;
+    margin-top: -10px;
+    padding-bottom: 10px;
+    animation: loading 8000ms;
+}
 
-        <header>
-            <img src="https://user-images.githubusercontent.com/97751426/257592751-b764d759-1591-49b8-9349-5febf957aa3c.png" alt="">
-        </header>
+#img_loading
+{
+    position: fixed;
+    top: 670px;
+    height: 13%;
+    width: 15%;
+    z-index: 1;
+    animation: image 7000ms;
+}
+
+#text_loading
+{
+    position: fixed;
+    top: 800px;
+    font-size: 90px;
+    animation: text 8000ms;
+    color: #9d5bee;
+}
+
+.Point_loading
+{
+    position: fixed;
+    margin-top: 590px;
+    font-size: 120px;
+    animation: Point infinite 2000ms;
+    color: #ff79da;
+}
+
+@keyframes loading
+{
+    0%
+    {
+        opacity: 1;
+        z-index: 1;
+    }
+    90%
+    {
+        opacity: 1;
+        z-index: 1;
+    }
+    100%
+    {
+        z-index: 1;
+    }
+}
+@keyframes image
+{
+    from
+    {
+        position: fixed;
+        top:800px;
+        transform: rotate(0deg);
+    }
+    
+    to{
+        position: fixed;
+        top: 670px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes text
+{
+    from
+    {
+        position: fixed;
+        top:300px;
+        opacity: 0;
+    }
+    
+    to{
+        position: fixed;
+        top: 800px;
+        opacity: 1;
+    }
+}
+
+@keyframes Point{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+#localisation{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top:1px ;
+    background-color:#eaeaea ;
+    border-top: solid 1px;
+    padding-left: 160px;
+}
+
+input:focus, input:hover 
+{
+    width: 270px;
+    padding-left: 20px;
+    border-radius: 35px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: rgb(5, 4, 5);
+    box-shadow: 1.5px 5px 10px 2px #afafaf3d ;
+    background-color: #9356dc;
+    background-color: #f2eafb;
+}
+
+.localisation_button{
+    background-color: #eaeaea;
+    border: hidden;
+    font-size: 40px;
+    font-weight: lighter;
+    
+}
+
+#Séléction{
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   padding-bottom: 150px;
+   padding-top: 40px;
+}
+
+#Séléction h1 {
+   
+    font-size: 67px;
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+   
+}
+
+#Séléction p {
+    font-size: 50px;
+    text-align: center;
+    margin-top: -18pt;
+}
+
+button
+{
+    border-radius: 150px;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    box-shadow:-5px 20px 10px 2px #afafaf3d;
+    background-image: linear-gradient(0.99turn, #9356dc, #ff79da);
+    color: #eaeaea;
+    padding: 30px;
+    margin-top: 15px;
+}
+
+#button:hover
+{
+    transform: scale(1.02);
+    box-shadow: 1.5px 5px 10px 2px #979797;
+    background-image: linear-gradient(0.01turn, #9356dc, #ff79da);
+}
+
+#Fonctionnement
+{
+    margin-left: 55px;
+    margin-right: 35px;
+    margin-bottom: 150px;
+    margin-top: 128px;
+    font-size: 31px;
+}
+
+.Fonctionnement_step
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 55px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #9356dc;
+    color: white;
+    position: absolute;
+    margin-left: -20px;
+}
+
+.SousPartie_Fonctionnement
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    height: 120px;
+    background-color: #f6f6f6;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 10px 20px 30px 2px #afafaf3d;
+    justify-content: center;
+}
+.SousPartie_Fonctionnement img
+{
+    height: 35px;
+    width:32px;
+    margin-right: 52px;
+}
+
+.Fonctionnement_bloc :hover
+{
+    margin-left: 40px;
+    box-shadow: 10px 20px 30px 2px #6106613d;
+    transform: scale(1.02);
+    background-color: #9356dc;
+    background-color: #f2eafb;
+}
+
+.SousPartie_Fonctionnement :hover
+{
+    margin-left: 0pt;
+    box-shadow: none;
+}
+.coeur
+{
+    width: 74px;
+    height: 57px;
+    padding-right: 45px;
+    padding-top: 40px;
+    margin: 0px;
+    margin-top: 6px;
+    flex: auto;
+    position: absolute;
+    right: 50px;
+}
+.CoeurV2
+{
+    width: 74px;
+    height: 57px;
+    padding-right: 45px;
+    padding-top: 40px;
+    margin: 0px;
+    margin-top: 6px;
+    flex: auto;
+    position: absolute;
+    right: 50px;
+    opacity: 0;
+}
+
+.CoeurV2:hover
+{
+    opacity: 1;
+}
+
+main
+{
+    background-color: #f6f6f6;
+    padding-top: 90px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 30px;
+    padding-bottom: 76px;
+}
+
+.Menu
+{
+    border-radius:  40px  40px  40px 40px;
+    background-color: white;
+    box-shadow: 10px 20px 30px 2px #afafaf3d;
+    margin-bottom: 53px;
+    height: 636px;
+    font-size: 42px;
+}
+
+.Menu_description
+{
+    display: flex;
+    height: 141px;
+    justify-content: space-between;
+}
+
+.Menu_photo
+{
+    border-radius: 30px 30px 0px 0px;
+    width: 100%;
+    height: 75%;
+}
+
+.Menu_description_text h3
+{
+margin: 0px;
+margin-top: 15px;
+margin-left: 40px;
+}
+
+.Menu_description_text p
+{
+margin: 0px;
+margin-top: 15px;
+margin-left: 40px;
+}
+
+
+.New_1, .New_2
+{
+    position: absolute;
+    margin-top:-600px;
+    right: 100px;
+    height: 80px;
+    animation: pulse 1800ms infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+footer
+{
+    background-color: #353535;
+    color: #eaeaea;
+    height: 500px;
+    font-size: 41px;
+    padding-left: 50px;
+    padding-top: 17px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer :hover
+{
+    color: blueviolet;
+}
+
+.footer_image-texte
+{
+    color: #eaeaea;
+    display: flex;
+height: 50px;
+align-items: center;
+}
+
+.footer_image-texte img
+{
+    height: 70px; ;
+    width: 50px; ;
+}
+footer img
+{
+    height: 30%;
+    width: 30%;
+}
+footer p
+{
+    color: #eaeaea;
+    margin: 0px;
+}
+
+@media all and (min-width: 992px)
+{
+    header
+    {
+        height: 70px;
+    }
+    #img_loading
+    {
+        left: 600px;
+        top:380px;
+        height: 23%;
+    }
+
+    #text_loading
+    {
+        top: 350px;
+        left: 900px;
+    }
+
+    @keyframes image
+    {
+        from{
+            position: fixed;
+            left:1200px;
+            transform: rotate(0deg);
+        }
         
-        <div id="localisation">
-            <img class="localisation_logo" src="https://user-images.githubusercontent.com/97751426/257593836-c11e8536-2410-456a-8eeb-7916eed76409.png" alt="logo" height="110">
-            <input class="localisation_button" type="search" value="Paris, Belleville"> 
-        </div>
+        to{
+            position: fixed;
+            left: 600px;
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes text
+    {
+        from{
+            position: fixed;
+            left:300px;
+            opacity: 0;
+        }
+        
+        to{
+            position: fixed;
+            left: 900px;
+            opacity: 1;
+        }
+    }
+    main{
+        padding-top: 10px;
+    }
 
-        <div id="container">
+    main h1
+    {
+        display: flex;
+        justify-content: center;
+    }
+    #container
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        margin-top: 40px;
+        height: 500px;
+    }
+    
+    .Menu
+    {
+        width: 650px ;
+        height: 410px;
+        font-size: 20px;
+    }  
+    
+    .coeur 
+    {
+        width: 43px;
+        height: 35px;
+        margin-left: 552px;
+        margin-top: 12px;
+        padding: 20px;
+        left: auto;
+        right: auto;
+    }
 
-            <div id="Séléction">
-                <h1>Réserver le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-                <button id="button"> Explorez nos restaurants</button>
-            </div>
+    .CoeurV2
+    {
+        width: 43px;
+        height: 35px;
+        margin-left: 552px;
+        margin-top: 12px;
+        padding: 20px;
+        left: auto;
+        right: auto;
+        opacity: 0;
+    }
+    .CoeurV2:hover
+    {
+        opacity: 1;
+    }
 
-            <div id="Fonctionnement">
-                
-                <h1>Fonctionnement</h1>
-                
-                <div class="Fonctionnement_bloc">
-                    <span class="Fonctionnement_step">1</span>
-                    <a class="SousPartie_Fonctionnement" href="#"> 
-                        <img src="https://user-images.githubusercontent.com/97751426/257641482-d4c6f596-48aa-4670-8bfb-2c7bba6a61c4.png" alt="logo" width="150">
-                        <h2>Choisissez un restaurant</h2> 
-                    </a>
-                </div>
+    .New_1, .New_2
+    {
+        position: absolute;
+        margin-top:-440px;
+        right: auto;
+        margin-left: 535px;
+        height: 35px;
+        width: 90px;
+    }
 
-                <div class="Fonctionnement_bloc">
-                    <span class="Fonctionnement_step">2</span>
-                    <a class="SousPartie_Fonctionnement" href="#"> 
-                        <img src="https://user-images.githubusercontent.com/97751426/257641502-27d1d913-acc9-42f3-a579-aa4cda0d03ee.png" alt="logo" width="150">
-                        <h2>Composez votre menu</h2>
-                    </a>
-                </div>
+    #localisation
+    {
+        height: 100px;
+    }
 
-                <div class="Fonctionnement_bloc">
-                    <span class="Fonctionnement_step">3</span>
-                    <a class="SousPartie_Fonctionnement" href="#"> 
-                        <img src="https://user-images.githubusercontent.com/97751426/257641491-14bcd086-3df1-4513-9cee-4da778d738bb.png" alt="logo" width="150">
-                        <h2>Dégustez au restaurant</h2>
-                    </a>
-                </div>
+    .localisation_logo
+    {
+        height: 57px;
+        margin-top: 20px;
+    }
 
-            </div>
+    .localisation_button
+    {
+        font-size: 25px;
+    }
+    
+    #Séléction
+    {
+        display: flex;
+        background-color: white;  
+        padding-top: 0px;
+        padding-bottom: 82px;
+        justify-content: space-between;
+    }
 
-        </div>
-            
-        <main>
+    #Séléction h1
+    {
+        font-size: 35px;
+        
+    }
+    
+    #Séléction p
+    {
+        margin: 0px;
+        font-size: 27px;
+    }
 
-            <h1>Restaurants</h1>
+    #Séléction input
+    {
+       margin: 0pt;
+        font-size: 20px;
+    }
 
-            <div class="Cards">
-                <a href="La_palette_du_gôut.html">
-                    <div class="Menu" >
-                        <img class="Menu_photo" src="https://user-images.githubusercontent.com/97751426/257655097-6382594a-4b92-4355-983e-641178b63498.jpg" alt="LaPalette">
-                        <div class="Menu_description">
-                            <div class="Menu_description_text">
-                                <h3>La palette du gôut</h3>
-                                <p>Ménilmontant</p>
-                            </div>
-                            <img class="coeur" src="https://user-images.githubusercontent.com/97751426/257598064-f1300a62-e1f1-41d3-b591-50adbea2aee6.png" alt="coeur">
-                            <img class="CoeurV2" src="https://user-images.githubusercontent.com/97751426/257597994-2c5f90c0-ef20-4106-8080-efa339f3d323.png" alt="coeur">
-                        </div>
-                        <img class="New_1" src="https://user-images.githubusercontent.com/97751426/257597865-1f142b3f-7a1b-4cb0-b5be-167bb63b20a1.png" alt="logo">
-                    </div>
-                </a>
+    #Fonctionnement 
+    {
+        margin-top: 0px;
+    }
+    #Fonctionnement h1
+    {
+        font-size: 33px;
+        margin-left: 35px;
+    }
 
-                <a href="La_note_enchantée.html">
-                    <div class="Menu" >
-                        <img class="Menu_photo" src="https://user-images.githubusercontent.com/97751426/257655103-9371090c-02a3-4f43-a6f1-962412c7df05.jpg" alt="LaNote">
-                        <div class="Menu_description">
-                            <div class="Menu_description_text">
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
-                            </div>
-                            <img class="coeur" src="https://user-images.githubusercontent.com/97751426/257598064-f1300a62-e1f1-41d3-b591-50adbea2aee6.png" alt="coeur">
-                            <img class="CoeurV2" src="https://user-images.githubusercontent.com/97751426/257597994-2c5f90c0-ef20-4106-8080-efa339f3d323.png" alt="coeur">    
-                    </div>
-                        <img class="New_2" src="https://user-images.githubusercontent.com/97751426/257597865-1f142b3f-7a1b-4cb0-b5be-167bb63b20a1.png" alt="logo">
-                    </div>
-                </a>
-            </div>   
+    .SousPartie_Fonctionnement
+    {
+        height: 55px;
+        font-size: 13px;
+        width: 350px;
+    }
 
-            <div class="Cards">
-                <a href="a_la_francaise.html">
-                    <div class="Menu" >
-                        <img class="Menu_photo" src="https://user-images.githubusercontent.com/97751426/257655094-4e9495f9-36bf-430b-b4a3-dc56c114effc.jpg" alt="LaFrancaise">
-                        <div class="Menu_description">
-                            <div class="Menu_description_text">
-                                <h3>A la française</h3>
-                                <p>Cité Rouge</p>
-                            </div>
-                            <img class="coeur" src="https://user-images.githubusercontent.com/97751426/257598064-f1300a62-e1f1-41d3-b591-50adbea2aee6.png" alt="coeur">
-                            <img class="CoeurV2" src="https://user-images.githubusercontent.com/97751426/257597994-2c5f90c0-ef20-4106-8080-efa339f3d323.png" alt="coeur">
-                        </div>
-                    </div>
-                </a>
+    .Fonctionnement_step
+    {
+        margin-top: 30px;
+        height: 40px;
+        width: 40px;
+        margin-left: -20px;
+    }
 
-                <a href="Le_délice_des_sens.html">
-                    <div class="Menu" >
-                        <img class="Menu_photo" src="https://user-images.githubusercontent.com/97751426/257655102-8095b120-6de6-422d-845d-f6fd7f922d4a.jpg" alt="LeDelice">
-                        <div class="Menu_description">
-                            <div class="Menu_description_text">
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
-                            </div>
-                                <img class="coeur" src="https://user-images.githubusercontent.com/97751426/257598064-f1300a62-e1f1-41d3-b591-50adbea2aee6.png" alt="coeur">
-                                <img class="CoeurV2" src="https://user-images.githubusercontent.com/97751426/257597994-2c5f90c0-ef20-4106-8080-efa339f3d323.png" alt="coeur">
-                        </div>
-                    </div>
-                </a>
-            </div>
+    .SousPartie_Fonctionnement img
+    {
+        height: 23px;
+        width: 28px;
+        margin-right: 20px;
+    }
 
-        </main>
+    button{
+        font-size: 20px;
+    }
+    
+    .Cards
+    {
+      display: flex;  
+      flex-wrap: wrap;
+      justify-content: space-around
+    }
 
-        <footer>
-            <img src="https://user-images.githubusercontent.com/97751426/257645900-004c1e0c-fc6a-4190-8ce6-943bc3ede7bf.png" alt="logo">
+    footer{
+        height: 185px;
+        font-size: 20px;
+        flex-direction: row;
+        align-items: center;   
+    }
+    footer img
+    {
+        height: 35%;
+        width: 20%;
 
-            <a href="">
-                <div class="footer_image-texte">
-                    <img src="https://user-images.githubusercontent.com/97751426/257645350-6e3d9443-d955-4d5c-9f7b-5adc9cdcd500.png" alt="logo">
-                    <p>Proposer un restaurant</p>
-                </div>
-            </a>
-            <a href="">
-                <div class="footer_image-texte">
-                    <img src="https://user-images.githubusercontent.com/97751426/257645353-dbb17af9-34e6-4535-933b-bd5f7ac431ee.png" alt="logo">
-                    <p>Devenir partenaire</p>
-                </div>
-            </a>
-            <a href="">
-                <p>Mentions légales</p>
-            </a>
-
-            <a href="">
-                <p>Contact</p>
-            </a>
-        </footer>
-
-    </body>
-</html>
+    }   
+    .footer_image-texte img 
+    {
+        height: 52px;
+        width: 42px;
+    }
+}
